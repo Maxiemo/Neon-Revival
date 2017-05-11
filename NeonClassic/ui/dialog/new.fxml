@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<HBox xmlns:fx="http://javafx.com/fxml" alignment="center" id="transparent">
+  <VBox alignment="center" id="transparent">
+    <GridPane id="dialog_pane"
+      alignment="center" hgap="10" vgap="10">
+      <padding>
+        <Insets top="10" right="25" bottom="10" left="25" />
+      </padding>
+
+      <Label GridPane.columnIndex="0" GridPane.rowIndex="0"
+        GridPane.columnSpan="2"
+        text="Use tab to move between options. Press enter to start the game, esc to cancel.">
+        <padding>
+          <Insets top="10" right="0" bottom="10" left="0" />
+        </padding>
+      </Label>
+
+      <Label GridPane.columnIndex="0" GridPane.rowIndex="1" text="Name:" />
+      <TextField fx:id="nameField" GridPane.columnIndex="1"
+        GridPane.rowIndex="1" />
+
+      <Label GridPane.columnIndex="0" GridPane.rowIndex="2"
+        text="Profession:" />
+      <TextField fx:id="professionField" GridPane.columnIndex="1"
+        GridPane.rowIndex="2" text="adventurer" />
+
+      <Label GridPane.columnIndex="0" GridPane.rowIndex="3" text="Gender:" />
+      <HBox fx:id="genderBox" spacing="10" alignment="center"
+        GridPane.columnIndex="1" GridPane.rowIndex="3">
+        <fx:define>
+          <ToggleGroup fx:id="genderGroup" />
+        </fx:define>
+        <RadioButton fx:id="femaleButton" text="Female"
+          toggleGroup="$genderGroup" selected="true" />
+        <RadioButton fx:id="maleButton" text="Male"
+          toggleGroup="$genderGroup" />
+      </HBox>
+
+      <Label GridPane.columnIndex="0" GridPane.rowIndex="4" text="Race:" />
+      <ComboBox fx:id="raceBox" GridPane.columnIndex="1"
+        GridPane.rowIndex="4" maxWidth="Infinity" />
+
+      <Label GridPane.columnIndex="0" GridPane.rowIndex="5"
+        text="Specialisation:" />
+      <HBox fx:id="specBox" spacing="10" alignment="center"
+        GridPane.columnIndex="1" GridPane.rowIndex="5">
+        <fx:define>
+          <ToggleGroup fx:id="specGroup" />
+        </fx:define>
+      </HBox>
+
+      <Label GridPane.columnIndex="0" GridPane.rowIndex="6"
+        text="Birthsign:" />
+      <ComboBox fx:id="signBox" GridPane.columnIndex="1"
+        GridPane.rowIndex="6" maxWidth="Infinity" />
+
+      <HBox GridPane.columnIndex="0" GridPane.rowIndex="7"
+        GridPane.columnSpan="2" spacing="10" alignment="center">
+        <padding>
+          <Insets top="15" right="12" bottom="15" left="12" />
+        </padding>
+        <Button text="Start" defaultButton="true" onAction="#startGame" />
+        <Button fx:id="cancelButton" text="Cancel" cancelButton="true" />
+      </HBox>
+    </GridPane>
+  </VBox>
+</HBox>

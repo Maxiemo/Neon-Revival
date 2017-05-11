@@ -1,0 +1,127 @@
+.root {
+	-fx-base: #303030;
+	-fx-background-color: #303030;
+}
+
+#main-title {
+	-fx-font-size: 64px;
+	-fx-fill: #FF3020;
+	-fx-effect: innershadow(three-pass-box , rgba(0, 0, 0, 0.7) , 6, 0.0 , 0 , 2);
+}
+
+#main-version {
+	-fx-font-size: 12px;
+	-fx-fill: gray;
+}
+
+#neon-link {
+	-fx-font-size: 12px;
+	-fx-text-fill: gray;
+}
+
+#neon-link:focused {
+	-fx-text-fill: #FF3020;
+}
+
+#transparent {
+	-fx-background-color: transparent;
+}
+
+#dialog_pane {
+	-fx-opacity: 0.95;
+	-fx-background-color: rgba(33, 33, 33);
+	-fx-border-color: gray;
+}
+
+#dialog-label-top {
+	-fx-border-color: transparent transparent gray transparent;
+	-fx-padding: 10 20 10 20;
+}
+
+#dialog-label-bottom {
+	-fx-border-color: gray transparent transparent transparent;
+	-fx-padding: 10 20 10 20;
+	-fx-alignment: center-left
+}
+
+#dialog-label-center {
+	-fx-border-color: gray transparent gray transparent;
+	-fx-padding: 10 20 10 20;
+	-fx-alignment: center-left
+}
+
+#dialog-list-view {
+	-fx-border-color: transparent gray transparent gray;
+	-fx-background-color: transparent;
+}
+
+#journal-list-view {
+	-fx-border-color: transparent gray transparent gray;
+	-fx-background-color: transparent;
+}
+
+#journal-list-view:focused {
+	-fx-border-color: silver;
+	-fx-background-color: transparent;
+}
+
+#dialog-quest-title {
+	-fx-font-weight: bold;
+}
+
+.hyperlink {
+	-fx-font-size: 15;
+	-fx-text-fill: white;
+	-fx-underline: false;
+}
+
+.hyperlink:focused {
+	-fx-text-fill: red;
+	-fx-border-width: 0;
+}
+
+.text-field {
+	-fx-background-color: #424242;
+	-fx-text-fill: white;
+}
+
+.combo-box-popup .list-view {
+	-fx-effect: innershadow(three-pass-box , rgba(0, 0, 0, 0.7) , 6, 0.0 , 0 , 2);
+}
+
+.combo-box-popup .list-view .list-cell {
+	-fx-background-color: #424242;
+}
+
+.combo-box-popup .list-view .list-cell:hover {
+	-fx-background-color: #333333;
+}
+
+.list-view .list-cell {
+	-fx-background-color: #424242;
+}
+
+.list-view .list-cell:selected {
+	-fx-background-color: #333333;
+}
+
+.button {
+	-fx-text-fill: silver;
+    -fx-background-color: #333333;
+	-fx-background-radius: 5;
+	-fx-border-color: transparent;
+}
+
+.button:hover {
+	-fx-border-radius: 5;
+	-fx-border-color: silver;
+}
+
+.button:focused {
+	-fx-border-radius: 5;
+	-fx-border-color: silver;
+}
+
+#service {
+	-fx-text-fill: royalblue;
+}

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.embed.swing.SwingNode?>
+<?import neon.ui.custom.DescriptionPane?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" styleClass="root">
+  <center>
+    <GridPane>
+      <rowConstraints>
+        <RowConstraints vgrow="NEVER" />
+        <RowConstraints vgrow="ALWAYS" />
+      </rowConstraints>
+      <columnConstraints>
+        <ColumnConstraints percentWidth="35.0" />
+        <ColumnConstraints percentWidth="30.0" />
+        <ColumnConstraints percentWidth="35.0" />
+      </columnConstraints>
+
+      <padding>
+        <Insets top="0" right="10" bottom="0" left="10" />
+      </padding>
+      
+      <Label id="dialog-label-top" text="Player"
+        GridPane.columnIndex="0" GridPane.rowIndex="0" maxWidth="Infinity"/>
+      <ListView fx:id="inventoryList" id="journal-list-view"
+        GridPane.columnIndex="0" GridPane.rowIndex="1" />
+
+      <HBox GridPane.columnIndex="1" GridPane.rowIndex="0" GridPane.rowSpan="2" alignment="center">
+        <DescriptionPane fx:id="description"
+          focusTraversable="false" />
+      </HBox>
+
+      <Label id="dialog-label-top" fx:id="containerLabel"
+        GridPane.columnIndex="2" GridPane.rowIndex="0" maxWidth="Infinity"/>
+      <ListView fx:id="containerList" id="journal-list-view"
+        GridPane.columnIndex="2" GridPane.rowIndex="1" />
+    </GridPane>
+  </center>
+  <bottom>
+    <HBox spacing="10" id="dialog-label-bottom">
+      <padding>
+        <Insets top="10" right="15" bottom="10" left="15" />
+      </padding>
+      <Button fx:id="takeButton" text="SPACE" onAction="#take" focusTraversable="false" />
+      <Label text="take/drop item" />
+      <Button fx:id="quitButton" text="ESC" focusTraversable="false" />
+      <Label text="close container" />
+    </HBox>
+  </bottom>
+</BorderPane>

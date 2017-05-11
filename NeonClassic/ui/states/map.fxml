@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.embed.swing.SwingNode?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" styleClass="root">
+  <top>
+    <Label fx:id="infoLabel" id="dialog-label-top" maxWidth="Infinity" />
+  </top>
+  <center>
+    <HBox alignment="center">
+      <SwingNode fx:id="mapNode" />
+    </HBox>
+  </center>
+  <bottom>
+    <HBox spacing="10" id="dialog-label-bottom">
+      <padding>
+        <Insets top="10" right="15" bottom="10" left="15" />
+      </padding>
+      <Button fx:id="useButton" text="SPACE" onAction="#toggleFill" />
+      <Label text="toggle fill" />
+      <Button fx:id="quitButton" text="ESC" />
+      <Label text="quit map" />
+    </HBox>
+  </bottom>
+</BorderPane>

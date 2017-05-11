@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<HBox alignment="center" id="transparent">
+  <VBox alignment="center" id="transparent">
+    <GridPane xmlns:fx="http://javafx.com/fxml" id="dialog_pane"
+      alignment="center" hgap="10" vgap="10">
+      <padding>
+        <Insets top="10" right="25" bottom="10" left="25" />
+      </padding>
+
+      <Label GridPane.columnIndex="0" GridPane.rowIndex="0"
+        text="Use arrow keys to select a saved game. Press enter to start, esc to cancel.">
+        <padding>
+          <Insets top="10" right="0" bottom="10" left="0" />
+        </padding>
+      </Label>
+
+      <ListView fx:id="saveList" GridPane.columnIndex="0"
+        GridPane.rowIndex="1" prefHeight="300">
+      </ListView>
+
+      <HBox GridPane.columnIndex="0" GridPane.rowIndex="2" spacing="10"
+        alignment="center">
+        <padding>
+          <Insets top="15" right="12" bottom="15" left="12" />
+        </padding>
+        <Button text="Start" defaultButton="true" onAction="#startGame" />
+        <Button fx:id="cancelButton" text="Cancel" cancelButton="true" />
+      </HBox>
+    </GridPane>
+  </VBox>
+</HBox>

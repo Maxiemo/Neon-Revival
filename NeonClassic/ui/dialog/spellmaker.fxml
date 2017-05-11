@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<HBox alignment="center" id="transparent">
+  <VBox alignment="center" id="transparent">
+    <GridPane xmlns:fx="http://javafx.com/fxml" id="dialog_pane"
+      alignment="center" hgap="10" vgap="10">
+      <padding>
+        <Insets top="10" right="25" bottom="10" left="25" />
+      </padding>
+      <columnConstraints>
+        <ColumnConstraints hgrow="ALWAYS" />
+        <ColumnConstraints hgrow="ALWAYS" />
+        <ColumnConstraints hgrow="ALWAYS" />
+      </columnConstraints>
+
+      <Label GridPane.columnIndex="0" GridPane.rowIndex="0" text="Name:" />
+      <TextField fx:id="nameField" GridPane.columnIndex="1"
+        GridPane.rowIndex="0" GridPane.columnSpan="2" />
+
+      <Label GridPane.columnIndex="0" GridPane.rowIndex="1" text="Effect:" />
+      <ComboBox fx:id="effectBox" GridPane.columnIndex="1"
+        GridPane.rowIndex="1" GridPane.columnSpan="2" maxWidth="Infinity" />
+
+      <Label GridPane.columnIndex="0" GridPane.rowIndex="2"
+        text="Magnitude:" />
+      <Slider fx:id="sizeSpinner" GridPane.columnIndex="1"
+        GridPane.rowIndex="2" maxWidth="Infinity" min="0" max="100" blockIncrement="1"
+        showTickLabels="true" />
+      <Label fx:id="sizeLabel" text="0" GridPane.columnIndex="2"
+        GridPane.rowIndex="2" />
+
+      <Label GridPane.columnIndex="0" GridPane.rowIndex="3" text="Range:" />
+      <Slider fx:id="rangeSpinner" GridPane.columnIndex="1"
+        GridPane.rowIndex="3" maxWidth="Infinity" min="0" max="100"
+        showTickLabels="true" />
+      <Label fx:id="rangeLabel" text="0" GridPane.columnIndex="2"
+        GridPane.rowIndex="3" />
+
+      <Label GridPane.columnIndex="0" GridPane.rowIndex="4"
+        text="Duration:" />
+      <Slider fx:id="durationSpinner" GridPane.columnIndex="1"
+        GridPane.rowIndex="4" maxWidth="Infinity" min="0" max="100"
+        showTickLabels="true" />
+      <Label fx:id="durationLabel" text="0" GridPane.columnIndex="2"
+        GridPane.rowIndex="4" />
+
+      <HBox GridPane.columnIndex="0" GridPane.rowIndex="5"
+        GridPane.columnSpan="3" spacing="10" id="dialog-label-bottom">
+        <padding>
+          <Insets top="10" right="15" bottom="10" left="15" />
+        </padding>
+        <Button fx:id="makeButton" text="ENTER" defaultButton="true"
+          onAction="#createSpell" />
+        <Label text="create spell" />
+        <Button fx:id="cancelButton" text="ESC" cancelButton="true" />
+        <Label text="cancel" />
+      </HBox>
+    </GridPane>
+  </VBox>
+</HBox>

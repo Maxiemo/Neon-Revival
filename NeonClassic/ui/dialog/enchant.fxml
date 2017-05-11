@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<HBox xmlns:fx="http://javafx.com/fxml" alignment="center" id="transparent">
+  <VBox alignment="center" id="transparent">
+    <GridPane id="dialog_pane" alignment="center" hgap="10"
+      vgap="10">
+      <padding>
+        <Insets top="10" right="25" bottom="10" left="25" />
+      </padding>
+
+      <Label id="dialog-label-top" text="Items"
+        GridPane.columnIndex="0" GridPane.rowIndex="0" maxWidth="Infinity" />
+      <ListView fx:id="itemList" GridPane.columnIndex="0"
+        GridPane.rowIndex="1" prefHeight="300">
+      </ListView>
+
+      <Label id="dialog-label-top" text="Enchantments"
+        GridPane.columnIndex="1" GridPane.rowIndex="0" maxWidth="Infinity" />
+      <ListView fx:id="spellList" GridPane.columnIndex="1"
+        GridPane.rowIndex="1" prefHeight="300">
+      </ListView>
+
+      <HBox GridPane.columnIndex="0" GridPane.rowIndex="2" GridPane.columnSpan="2" spacing="10" id="dialog-label-bottom">
+        <padding>
+          <Insets top="10" right="15" bottom="10" left="15" />
+        </padding>
+        <Button fx:id="enchantButton" text="ENTER" defaultButton="true" onAction="#enchant" />
+        <Label text="brew" />
+        <Button fx:id="cancelButton" text="ESC" cancelButton="true" />
+        <Label text="cancel" />
+      </HBox>
+    </GridPane>
+  </VBox>
+</HBox>

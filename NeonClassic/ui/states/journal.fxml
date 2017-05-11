@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" styleClass="root">
+  <center>
+    <StackPane>
+      <GridPane fx:id="characterPane">
+        <columnConstraints>
+          <ColumnConstraints hgrow="ALWAYS" />
+          <ColumnConstraints hgrow="ALWAYS" />
+          <ColumnConstraints hgrow="ALWAYS" />
+        </columnConstraints>
+
+        <Label id="dialog-label-top" text="Stats"
+          GridPane.columnIndex="0" GridPane.rowIndex="0" maxWidth="Infinity" />
+        <VBox fx:id="statsBox" GridPane.columnIndex="0"
+          GridPane.rowIndex="1" GridPane.rowSpan="5" maxHeight="Infinity" />
+
+        <Label id="dialog-label-top" text="Skills"
+          GridPane.columnIndex="1" GridPane.rowIndex="0" maxWidth="Infinity" />
+        <ListView fx:id="skillsList" id="journal-list-view"
+          GridPane.columnIndex="1" GridPane.rowIndex="1"
+          GridPane.rowSpan="5" maxHeight="Infinity" />
+
+        <Label id="dialog-label-top" text="Feats"
+          GridPane.columnIndex="2" GridPane.rowIndex="0" maxWidth="Infinity" />
+        <ListView fx:id="featList" id="journal-list-view"
+          GridPane.columnIndex="2" GridPane.rowIndex="1" maxHeight="Infinity" />
+
+        <Label id="dialog-label-center" text="Traits"
+          GridPane.columnIndex="2" GridPane.rowIndex="2" maxWidth="Infinity" />
+        <ListView fx:id="traitList" id="journal-list-view"
+          GridPane.columnIndex="2" GridPane.rowIndex="3" maxHeight="Infinity" />
+
+        <Label id="dialog-label-center" text="Abilities"
+          GridPane.columnIndex="2" GridPane.rowIndex="4" maxWidth="Infinity" />
+        <ListView fx:id="abilityList" id="journal-list-view"
+          GridPane.columnIndex="2" GridPane.rowIndex="5" maxHeight="Infinity" />
+      </GridPane>
+
+      <GridPane fx:id="questPane" hgap="10" vgap="10" />
+
+      <GridPane fx:id="spellPane" hgap="10" vgap="10">
+        <ListView fx:id="spellList" GridPane.columnIndex="0"
+          GridPane.rowIndex="0" />
+      </GridPane>
+    </StackPane>
+  </center>
+  <bottom>
+    <HBox spacing="10" id="dialog-label-bottom">
+      <padding>
+        <Insets top="10" right="15" bottom="10" left="15" />
+      </padding>
+      <Button fx:id="questButton" text="Q" />
+      <Label text="quest list" />
+      <Button fx:id="spellButton" text="S" />
+      <Label text="spell list" />
+      <Button fx:id="characterButton" text="C" />
+      <Label text="character sheet" />
+      <Button fx:id="quitButton" text="ESC" />
+      <Label text="quit journal" />
+      <Button fx:id="equipButton" text="SPACE" onAction="#equipSpell" />
+      <Label fx:id="equipLabel" text="equip spell" />
+    </HBox>
+  </bottom>
+</BorderPane>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" styleClass="root">
+  <center>
+    <GridPane alignment="center" hgap="10" vgap="10">
+      <padding>
+        <Insets top="25" right="25" bottom="10" left="25" />
+      </padding>
+      <columnConstraints>
+        <ColumnConstraints halignment="CENTER" />
+      </columnConstraints>
+      <Text fx:id="titleText" id="main-title" GridPane.columnIndex="0"
+        GridPane.rowIndex="0" />
+      <Hyperlink fx:id="newLink" GridPane.columnIndex="0"
+        GridPane.rowIndex="1" />
+      <Hyperlink fx:id="loadLink" GridPane.columnIndex="0"
+        GridPane.rowIndex="2" />
+      <Hyperlink fx:id="optionLink" GridPane.columnIndex="0"
+        GridPane.rowIndex="3" />
+      <Hyperlink fx:id="quitLink" GridPane.columnIndex="0"
+        GridPane.rowIndex="4" />
+      <Hyperlink id="neon-link" text="http://sourceforge.net/projects/neon/"
+        GridPane.columnIndex="0" GridPane.rowIndex="5" onAction="#loadWebsite" />
+    </GridPane>
+  </center>
+  <bottom>
+    <Text fx:id="versionText" id="main-version" text="release " />
+  </bottom>
+</BorderPane>

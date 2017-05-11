@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<HBox alignment="center" id="transparent">
+  <VBox alignment="center" id="transparent">
+    <GridPane xmlns:fx="http://javafx.com/fxml" id="dialog_pane"
+      alignment="center" hgap="10" vgap="10">
+      <Label fx:id="infoLabel" id="dialog-label-top"
+        GridPane.columnIndex="0" GridPane.rowIndex="0" maxWidth="Infinity" />
+
+      <ListView fx:id="spellList" GridPane.columnIndex="0"
+        GridPane.rowIndex="1" prefHeight="300">
+      </ListView>
+
+      <HBox GridPane.columnIndex="0" GridPane.rowIndex="2" spacing="10" id="dialog-label-bottom">
+        <padding>
+          <Insets top="10" right="15" bottom="10" left="15" />
+        </padding>
+        <Button fx:id="tradeButton" text="SPACE" onAction="#buy" />
+        <Label text="buy spell" />
+        <Button fx:id="cancelButton" text="ESC" cancelButton="true" />
+        <Label text="cancel" />
+      </HBox>
+    </GridPane>
+  </VBox>
+</HBox>

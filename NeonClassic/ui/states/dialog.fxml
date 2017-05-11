@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" styleClass="root">
+  <ScrollPane fx:id="scroller" VBox.vgrow="ALWAYS">
+    <content>
+      <TextFlow fx:id="textArea" />
+    </content>
+  </ScrollPane>
+
+  <ListView fx:id="topicList" id="dialog-list-view" maxHeight="150"
+    minHeight="150" />
+
+  <HBox fx:id="bottomBox" spacing="10" id="dialog-label-bottom">
+    <padding>
+      <Insets top="10" right="15" bottom="10" left="15" />
+    </padding>
+    <Button fx:id="takeButton" text="SPACE" focusTraversable="false" />
+    <Label text="pick subject" />
+    <Button fx:id="quitButton" text="ESC" focusTraversable="false" />
+    <Label text="end conversation" />
+  </HBox>
+</VBox>
